@@ -2,24 +2,22 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
-    <title>Stream AFK Overlay Plein Écran Mobile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Stream AFK Force Fullscreen</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
     
     <style>
-        /* Réinitialisation totale et stricte pour éliminer les blocages des navigateurs mobiles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         html, body {
-            width: 100% !important;
-            height: 100% !important;
-            min-width: 100% !important;
-            min-height: 100% !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            background: #09090b !important; /* Applique le fond noir absolu sur tout l'écran */
-            overflow: hidden !important;
-            position: fixed !important; /* Évite les défilements ou les barres blanches sur iOS/Android */
-            top: 0;
-            left: 0;
+            background: #09090b !important;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
         }
 
         body {
@@ -29,12 +27,33 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            position: relative;
         }
 
-        /* --- Effet d'ambiance plein écran élargi --- */
+        /* --- LE FIX POUR MOBLIN --- */
+        /* Ce conteneur va s'étendre de force sur toute la surface réelle de l'écran du téléphone, */
+        /* même si Moblin limite la taille de la source navigateur. */
+        .fullscreen-force {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100vw !important;
+            height: 100vh !important;
+            min-width: 100vi !important;
+            min-height: 100vb !important;
+            background: #09090b !important; /* Force le fond noir sur l'intégralité de l'écran du téléphone */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        /* --- Effet d'ambiance en arrière-plan --- */
         .background-glow {
             position: absolute;
-            width: 200%; /* Augmenté pour déborder largement et couvrir tout l'écran du téléphone */
+            width: 200%;
             height: 200%;
             background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, rgba(9, 9, 11, 0) 70%);
             top: 50%;
@@ -45,7 +64,7 @@
             pointer-events: none;
         }
 
-        /* --- Conteneur Principal --- */
+        /* --- Conteneur du Texte --- */
         .afk-container {
             text-align: center;
             z-index: 2;
@@ -54,7 +73,6 @@
             align-items: center;
             gap: 25px;
             padding: 20px;
-            width: 100%;
         }
 
         .status-badge {
@@ -79,7 +97,7 @@
         }
 
         h1 {
-            font-size: 3.2rem; /* Taille adaptée pour ne pas déborder sur un écran vertical */
+            font-size: 3.2rem;
             font-weight: 800;
             letter-spacing: -1px;
             text-transform: uppercase;
@@ -127,22 +145,24 @@
 </head>
 <body>
 
-    <div class="background-glow"></div>
+    <div class="fullscreen-force">
+        <div class="background-glow"></div>
 
-    <div class="afk-container">
-        <div class="status-badge">
-            <span class="dot"></span>
-            Stream en pause
-        </div>
+        <div class="afk-container">
+            <div class="status-badge">
+                <span class="dot"></span>
+                Stream en pause
+            </div>
 
-        <h1>Je reviens</h1>
-        
-        <p class="subtitle">Le live reprend dans quelques instants...</p>
+            <h1>Je reviens</h1>
+            
+            <p class="subtitle">Le live reprend dans quelques instants...</p>
 
-        <div class="socials-bar">
-            <div class="social-item"><span class="flag">🇫🇷</span> En Direct</div>
-            <div class="social-item">🎬 YouTube</div>
-            <div class="social-item">📱 TikTok</div>
+            <div class="socials-bar">
+                <div class="social-item"><span class="flag">🇫🇷</span> En Direct</div>
+                <div class="social-item">🎬 YouTube</div>
+                <div class="social-item">📱 TikTok</div>
+            </div>
         </div>
     </div>
 
