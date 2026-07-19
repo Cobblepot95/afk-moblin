@@ -2,22 +2,24 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Stream AFK Overlay Plein Écran</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <title>Stream AFK Overlay Plein Écran Mobile</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
     
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
+        /* Réinitialisation totale et stricte pour éliminer les blocages des navigateurs mobiles */
         html, body {
-            width: 100vw;
-            height: 100vh;
-            background: #09090b; /* Force le fond sombre partout */
-            overflow: hidden;
+            width: 100% !important;
+            height: 100% !important;
+            min-width: 100% !important;
+            min-height: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            background: #09090b !important; /* Applique le fond noir absolu sur tout l'écran */
+            overflow: hidden !important;
+            position: fixed !important; /* Évite les défilements ou les barres blanches sur iOS/Android */
+            top: 0;
+            left: 0;
         }
 
         body {
@@ -27,15 +29,14 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            position: relative;
         }
 
         /* --- Effet d'ambiance plein écran élargi --- */
         .background-glow {
             position: absolute;
-            width: 150%; /* Augmenté pour couvrir tout l'écran du téléphone */
-            height: 150%;
-            background: radial-gradient(circle, rgba(56, 189, 248, 0.18) 0%, rgba(9, 9, 11, 0) 65%);
+            width: 200%; /* Augmenté pour déborder largement et couvrir tout l'écran du téléphone */
+            height: 200%;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, rgba(9, 9, 11, 0) 70%);
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -53,6 +54,7 @@
             align-items: center;
             gap: 25px;
             padding: 20px;
+            width: 100%;
         }
 
         .status-badge {
@@ -77,7 +79,7 @@
         }
 
         h1 {
-            font-size: 3.5rem; /* Légèrement ajusté pour les écrans de smartphones verticaux */
+            font-size: 3.2rem; /* Taille adaptée pour ne pas déborder sur un écran vertical */
             font-weight: 800;
             letter-spacing: -1px;
             text-transform: uppercase;
@@ -118,7 +120,7 @@
         }
 
         @keyframes pulseGlow {
-            0%, 100% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.8; }
+            0%, 100% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.8; }
             50% { transform: translate(-50%, -50%) scale(1.1); opacity: 1; }
         }
     </style>
