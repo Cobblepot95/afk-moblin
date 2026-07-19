@@ -1,32 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
-<title>Exported from Notepad Next</title>
-<!--StartFragment-->
-<style type="text/css">
-div.main {
-  white-space: pre;
-  line-height: 1;
-}
-.s0 {
-  font-family: 'Courier New';
-  font-size: 15pt;
-  color: rgb(0, 0, 0);
-  background: rgb(255, 255, 255);
-}
-</style>
-</head>
-<body>
-<div class="main"></span><span class="s0">&lt;!DOCTYPE html&gt;
-&lt;html lang="fr"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;title&gt;Stream AFK Overlay&lt;/title&gt;
-    &lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&amp;display=swap" rel="stylesheet"&gt;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stream AFK Overlay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
     
-    &lt;style&gt;
+    <style>
         * {
             box-sizing: border-box;
             margin: 0;
@@ -35,7 +15,7 @@ div.main {
 
         body {
             font-family: 'Inter', sans-serif;
-            background: #09090b; /* Fond sombre trÃ¨s propre */
+            background: #09090b; /* Fond sombre */
             color: #ffffff;
             height: 100vh;
             display: flex;
@@ -46,7 +26,6 @@ div.main {
             position: relative;
         }
 
-        /* --- Effet d'ambiance en arriÃ¨re-plan --- */
         .background-glow {
             position: absolute;
             width: 600px;
@@ -59,7 +38,6 @@ div.main {
             animation: pulseGlow 8s infinite ease-in-out;
         }
 
-        /* --- Conteneur Principal --- */
         .afk-container {
             text-align: center;
             z-index: 2;
@@ -69,7 +47,6 @@ div.main {
             gap: 25px;
         }
 
-        /* Badge SupÃ©rieur (Sobre) */
         .status-badge {
             background: rgba(255, 255, 255, 0.05);
             padding: 6px 16px;
@@ -86,12 +63,11 @@ div.main {
         .dot {
             width: 8px;
             height: 8px;
-            background-color: #38bdf8; /* Bleu clair */
+            background-color: #38bdf8;
             border-radius: 50%;
             animation: blink 1.5s infinite ease-in-out;
         }
 
-        /* Titre Principal */
         h1 {
             font-size: 4rem;
             font-weight: 800;
@@ -102,14 +78,12 @@ div.main {
             -webkit-text-fill-color: transparent;
         }
 
-        /* Sous-titre dynamique */
         .subtitle {
             font-size: 1.2rem;
             font-weight: 300;
             color: #71717a;
         }
 
-        /* --- Barre de RÃ©seaux / Infos --- */
         .socials-bar {
             margin-top: 20px;
             display: flex;
@@ -129,7 +103,6 @@ div.main {
             font-size: 1.1rem;
         }
 
-        /* --- ANIMATIONS --- */
         @keyframes blink {
             0%, 100% { opacity: 0.3; }
             50% { opacity: 1; }
@@ -139,33 +112,28 @@ div.main {
             0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
             50% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
         }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
+    </style>
+</head>
+<body>
 
-    &lt;div class="background-glow"&gt;&lt;/div&gt;
+    <div class="background-glow"></div>
 
-    &lt;div class="afk-container"&gt;
-        &lt;div class="status-badge"&gt;
-            &lt;span class="dot"&gt;&lt;/span&gt;
+    <div class="afk-container">
+        <div class="status-badge">
+            <span class="dot"></span>
             Stream en pause
-        &lt;/div&gt;
+        </div>
 
-        &lt;h1&gt;Je reviens&lt;/h1&gt;
+        <h1>Je reviens</h1>
         
-        &lt;p class="subtitle"&gt;Le live reprend dans quelques instants...&lt;/p&gt;
+        <p class="subtitle">Le live reprend dans quelques instants...</p>
 
-        &lt;div class="socials-bar"&gt;
-            &lt;div class="social-item"&gt;
-                &lt;span class="flag"&gt;ð«ð·&lt;/span&gt; En Direct
-            &lt;/div&gt;
-            &lt;div class="social-item"&gt;ð¬ YouTube&lt;/div&gt;
-            &lt;div class="social-item"&gt;ð± TikTok&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
+        <div class="socials-bar">
+            <div class="social-item"><span class="flag">🇫🇷</span> En Direct</div>
+            <div class="social-item">🎬 YouTube</div>
+            <div class="social-item">📱 TikTok</div>
+        </div>
+    </div>
 
-&lt;/body&gt;
-&lt;/html&gt;</div>
 </body>
-<!--EndFragment-->
 </html>
