@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Stream AFK Transparent Overlay</title>
+    <title>Stream AFK Transparent Pur</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
     
     <style>
@@ -13,7 +13,7 @@
             padding: 0;
         }
 
-        /* Le fond de la page est maintenant totalement transparent */
+        /* Transparence absolue et totale sur tout le conteneur */
         html, body {
             background: transparent !important;
             overflow: hidden;
@@ -23,7 +23,7 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            color: #ffffff;
+            color: #ffffff; /* Écritures blanches */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -31,7 +31,7 @@
             position: relative;
         }
 
-        /* Effet d'ambiance lumineux (marche très bien sur fond transparent) */
+        /* Halo lumineux bleu subtil en arrière-plan */
         .background-glow {
             position: absolute;
             width: 120%;
@@ -45,7 +45,7 @@
             pointer-events: none;
         }
 
-        /* Bloc principal avec un léger effet de verre dépoli sombre pour détacher le texte du stream */
+        /* Conteneur de texte sans aucune boîte, sans bordure et sans fond gris */
         .afk-container {
             text-align: center;
             z-index: 2;
@@ -53,26 +53,23 @@
             flex-direction: column;
             align-items: center;
             gap: 20px;
-            padding: 30px 40px;
-            background: rgba(10, 10, 12, 0.65);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 16px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            background: transparent !important; /* Force la transparence totale */
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8); /* Ombre pour garder le texte lisible sur le live */
         }
 
         .status-badge {
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.1);
             padding: 6px 14px;
             border-radius: 20px;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 2px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             display: flex;
             align-items: center;
             gap: 8px;
+            color: #ffffff;
         }
 
         .dot {
@@ -84,29 +81,28 @@
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 3.8rem; /* Taille réajustée */
             font-weight: 800;
             letter-spacing: -1px;
             text-transform: uppercase;
-            background: linear-gradient(180deg, #ffffff 0%, #d4d4d8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #ffffff; /* Blanc pur */
             line-height: 1.1;
         }
 
         .subtitle {
-            font-size: 1.05rem;
+            font-size: 1.2rem;
             font-weight: 300;
-            color: #e4e4e7;
+            color: #ffffff; /* Blanc pur */
+            opacity: 0.9;
         }
 
         .socials-bar {
             margin-top: 10px;
             display: flex;
-            gap: 20px;
-            font-size: 0.85rem;
+            gap: 25px;
+            font-size: 0.95rem;
             font-weight: 600;
-            color: #d4d4d8;
+            color: #ffffff; /* Blanc pur */
         }
 
         .social-item {
@@ -116,7 +112,7 @@
         }
 
         .flag {
-            font-size: 1rem;
+            font-size: 1.1rem;
         }
 
         @keyframes blink {
