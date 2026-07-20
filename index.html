@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Stream AFK Transparent Pur</title>
+    <title>Stream AFK - Statique et Transparent</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
     
     <style>
@@ -13,7 +13,6 @@
             padding: 0;
         }
 
-        /* Transparence absolue et totale sur tout le conteneur */
         html, body {
             background: transparent !important;
             overflow: hidden;
@@ -23,7 +22,7 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            color: #ffffff; /* Écritures blanches */
+            color: #ffffff;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -31,21 +30,19 @@
             position: relative;
         }
 
-        /* Halo lumineux bleu subtil en arrière-plan */
+        /* Halo lumineux bleu désormais FIXE (sans animation) */
         .background-glow {
             position: absolute;
             width: 120%;
             height: 120%;
-            background: radial-gradient(circle, rgba(56, 189, 248, 0.25) 0%, rgba(9, 9, 11, 0) 60%);
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, rgba(9, 9, 11, 0) 60%);
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 1;
-            animation: pulseGlow 8s infinite ease-in-out;
             pointer-events: none;
         }
 
-        /* Conteneur de texte sans aucune boîte, sans bordure et sans fond gris */
         .afk-container {
             text-align: center;
             z-index: 2;
@@ -54,8 +51,8 @@
             align-items: center;
             gap: 20px;
             padding: 20px;
-            background: transparent !important; /* Force la transparence totale */
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8); /* Ombre pour garder le texte lisible sur le live */
+            background: transparent !important;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
         }
 
         .status-badge {
@@ -72,6 +69,7 @@
             color: #ffffff;
         }
 
+        /* Le petit point reste animé pour montrer que le live n'est pas figé */
         .dot {
             width: 8px;
             height: 8px;
@@ -81,18 +79,18 @@
         }
 
         h1 {
-            font-size: 3.8rem; /* Taille réajustée */
+            font-size: 3.8rem;
             font-weight: 800;
             letter-spacing: -1px;
             text-transform: uppercase;
-            color: #ffffff; /* Blanc pur */
+            color: #ffffff;
             line-height: 1.1;
         }
 
         .subtitle {
             font-size: 1.2rem;
             font-weight: 300;
-            color: #ffffff; /* Blanc pur */
+            color: #ffffff;
             opacity: 0.9;
         }
 
@@ -102,7 +100,7 @@
             gap: 25px;
             font-size: 0.95rem;
             font-weight: 600;
-            color: #ffffff; /* Blanc pur */
+            color: #ffffff;
         }
 
         .social-item {
@@ -118,11 +116,6 @@
         @keyframes blink {
             0%, 100% { opacity: 0.3; }
             50% { opacity: 1; }
-        }
-
-        @keyframes pulseGlow {
-            0%, 100% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.7; }
-            50% { transform: translate(-50%, -50%) scale(1.1); opacity: 1; }
         }
     </style>
 </head>
