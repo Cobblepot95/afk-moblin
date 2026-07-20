@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Stream AFK - Transparent avec Vague</title>
+    <title>Stream AFK - Vague Circulaire</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
     
     <style>
@@ -70,8 +70,8 @@
             text-transform: uppercase;
             color: #ffffff;
             line-height: 1.1;
-            /* Ajout de l'animation de vague sur le contour */
-            animation: waveOutline 4s ease-in-out infinite;
+            /* L'animation ondulée est appliquée uniquement ici */
+            animation: waveOutline 4s linear infinite;
         }
 
         .subtitle {
@@ -108,25 +108,37 @@
             50% { opacity: 1; }
         }
 
-        /* Nouvelle animation : Effet de vague fluide sur le contour de "Je reviens" */
+        /* Effet de vague tournante et ondulée sur le contour de "Je reviens" */
         @keyframes waveOutline {
             0% {
                 text-shadow: 
-                    -4px 0px 8px rgba(56, 189, 248, 0.8), 
-                    4px 0px 8px rgba(56, 189, 248, 0.1),
-                    0 4px 10px rgba(0, 0, 0, 0.6);
+                    0px -4px 12px rgba(56, 189, 248, 0.9), 
+                    0px 4px 6px rgba(56, 189, 248, 0.2),
+                    0px 4px 10px rgba(0, 0, 0, 0.8);
+            }
+            25% {
+                text-shadow: 
+                    4px 0px 12px rgba(56, 189, 248, 0.9), 
+                    -4px 0px 6px rgba(56, 189, 248, 0.2),
+                    0px 4px 10px rgba(0, 0, 0, 0.8);
             }
             50% {
                 text-shadow: 
-                    4px 0px 8px rgba(56, 189, 248, 0.1), 
-                    -4px 0px 8px rgba(56, 189, 248, 0.8),
-                    0 4px 10px rgba(0, 0, 0, 0.6);
+                    0px 4px 12px rgba(56, 189, 248, 0.9), 
+                    0px -4px 6px rgba(56, 189, 248, 0.2),
+                    0px 4px 10px rgba(0, 0, 0, 0.8);
+            }
+            75% {
+                text-shadow: 
+                    -4px 0px 12px rgba(56, 189, 248, 0.9), 
+                    4px 0px 6px rgba(56, 189, 248, 0.2),
+                    0px 4px 10px rgba(0, 0, 0, 0.8);
             }
             100% {
                 text-shadow: 
-                    -4px 0px 8px rgba(56, 189, 248, 0.8), 
-                    4px 0px 8px rgba(56, 189, 248, 0.1),
-                    0 4px 10px rgba(0, 0, 0, 0.6);
+                    0px -4px 12px rgba(56, 189, 248, 0.9), 
+                    0px 4px 6px rgba(56, 189, 248, 0.2),
+                    0px 4px 10px rgba(0, 0, 0, 0.8);
             }
         }
     </style>
@@ -146,7 +158,7 @@
         <div class="socials-bar">
             <div class="social-item"><span class="flag">🇫🇷</span> En Direct</div>
             <div class="social-item">🎬 YouTube</div>
-            <div class="social-item">📱 TikTok</div>
+            <div class="social-item">📱 cobblepot95</div>
         </div>
     </div>
 
