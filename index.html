@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Stream AFK - Statique et Transparent</title>
+    <title>Stream AFK - Transparent Simple</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
     
     <style>
@@ -27,20 +27,6 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            position: relative;
-        }
-
-        /* Halo lumineux bleu désormais FIXE (sans animation) */
-        .background-glow {
-            position: absolute;
-            width: 120%;
-            height: 120%;
-            background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, rgba(9, 9, 11, 0) 60%);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1;
-            pointer-events: none;
         }
 
         .afk-container {
@@ -69,7 +55,6 @@
             color: #ffffff;
         }
 
-        /* Le petit point reste animé pour montrer que le live n'est pas figé */
         .dot {
             width: 8px;
             height: 8px;
@@ -120,8 +105,6 @@
     </style>
 </head>
 <body>
-
-    <div class="background-glow"></div>
 
     <div class="afk-container">
         <div class="status-badge">
