@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Stream AFK - Transparent Simple</title>
+    <title>Stream AFK - Transparent avec Vague</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
     
     <style>
@@ -38,7 +38,6 @@
             gap: 20px;
             padding: 20px;
             background: transparent !important;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
         }
 
         .status-badge {
@@ -53,6 +52,7 @@
             align-items: center;
             gap: 8px;
             color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
         }
 
         .dot {
@@ -70,6 +70,8 @@
             text-transform: uppercase;
             color: #ffffff;
             line-height: 1.1;
+            /* Ajout de l'animation de vague sur le contour */
+            animation: waveOutline 4s ease-in-out infinite;
         }
 
         .subtitle {
@@ -77,6 +79,7 @@
             font-weight: 300;
             color: #ffffff;
             opacity: 0.9;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
         }
 
         .socials-bar {
@@ -86,6 +89,7 @@
             font-size: 0.95rem;
             font-weight: 600;
             color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
         }
 
         .social-item {
@@ -98,9 +102,32 @@
             font-size: 1.1rem;
         }
 
+        /* Animation du point (en direct) */
         @keyframes blink {
             0%, 100% { opacity: 0.3; }
             50% { opacity: 1; }
+        }
+
+        /* Nouvelle animation : Effet de vague fluide sur le contour de "Je reviens" */
+        @keyframes waveOutline {
+            0% {
+                text-shadow: 
+                    -4px 0px 8px rgba(56, 189, 248, 0.8), 
+                    4px 0px 8px rgba(56, 189, 248, 0.1),
+                    0 4px 10px rgba(0, 0, 0, 0.6);
+            }
+            50% {
+                text-shadow: 
+                    4px 0px 8px rgba(56, 189, 248, 0.1), 
+                    -4px 0px 8px rgba(56, 189, 248, 0.8),
+                    0 4px 10px rgba(0, 0, 0, 0.6);
+            }
+            100% {
+                text-shadow: 
+                    -4px 0px 8px rgba(56, 189, 248, 0.8), 
+                    4px 0px 8px rgba(56, 189, 248, 0.1),
+                    0 4px 10px rgba(0, 0, 0, 0.6);
+            }
         }
     </style>
 </head>
